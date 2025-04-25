@@ -47,7 +47,7 @@
         class="bg-[var(--primary)] text-white py-4 px-6 flex items-center justify-between md:justify-start top-0 z-50 space-x-20">
         <!-- Logo -->
         <div class="flex items-center">
-            <a href="test.html">
+            <a href="index.html">
                 <img src="public/logo.png" alt="Logo E" class="w-10 z-50 invert brightness-0 saturate-0">
             </a>
         </div>
@@ -236,31 +236,8 @@
 
 
     </footer>
-
-
     <script src="js/menu.js"></script>
-
-    <!-- JavaScript for Mobile Menu Toggle -->
-    <script>
-
-        const arrow = document.getElementById('scroll-arrow');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 10) {
-                arrow.classList.add('opacity-0');
-            } else {
-                arrow.classList.remove('opacity-0');
-            }
-        });
-
-        arrow.addEventListener('click', () => {
-            window.scrollBy({
-                top: window.innerHeight,
-                behavior: 'smooth'
-            });
-        });
-
-    </script>
+    <script src="js/arrow.js"></script>
 </body>
 
 
