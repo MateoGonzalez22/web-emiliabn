@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMILIA Bienestar Natural</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #c2aca7;
+            --secondary: #a48f89;
+        }
+
+        .font-title {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-script {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .wave {
+            fill: #c2aca7;
+        }
+
+        #mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            touch-action: none;
+            /* Prevent scrolling while swiping */
+        }
+
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body class="text-[var(--secondary)] bg-white min-h-screen flex flex-col relative">
+    <!-- Navbar -->
+    <nav
+        class="bg-[var(--primary)] text-white py-4 px-6 flex items-center justify-between md:justify-start top-0 z-50 space-x-20">
+        <!-- Logo -->
+        <div class="flex items-center">
+            <a href="index.html">
+                <img src="public/logo.png" alt="Logo E" class="w-10 z-50 invert brightness-0 saturate-0">
+            </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-10 font-title text-lg">
+            <a href="#" class="inline-block w-[80px] hover:font-medium">SERVICIOS</a>
+            <a href="#" class="inline-block w-[80px] hover:font-medium">CONTACTO</a>
+        </div>
+
+        <!-- Hamburger Icon for Mobile -->
+        <div class="md:hidden">
+            <button id="hamburger-btn" class="focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- @menu -->
+    <div id="mobile-menu"
+        class="md:hidden fixed top-0 right-0 w-full h-full bg-[var(--secondary)] text-white flex flex-col z-50">
+
+        <div class="flex justify-end p-4">
+            <button id="close-btn" class="focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <!-- @menu-links -->
+        <div class="flex flex-col items-center space-y-6 font-title text-lg mt-8">
+            <a href="#" class="hover:underline">SPA COMPARTIDO</a>
+            <a href="#" class="hover:underline">DIA DE SPA</a>
+            <a href="#" class="hover:underline">NUTRICIÓN</a>
+            <a href="#" class="hover:underline">GYM CLASS</a>
+            <a href="#" class="hover:underline">DEPILACIÓN LASER</a>
+            <a href="#" class="hover:underline">BELLEZA DE MANOS Y PIES</a>
+            <a href="#" class="hover:underline">MASAJES</a>
+            <a href="#" class="hover:underline">TRATAMIENTOS FACIALES</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="text-center h-[40%]">
+        <div class="bg-[var(--primary)] text-white flex flex-col items-center justify-center py-10 md:pt-20 md:py-0">
+            <h1 class="font-title text-6xl tracking-wider">EMILIA</h1>
+            <p class="text-xl mt-1 font-title">BIENESTAR NATURAL</p>
+        </div>
+
+        <svg class="w-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path class="wave"
+                d="M0,160L80,180C160,200,320,220,480,200C640,180,800,140,960,120C1120,100,1280,140,1360,160L1440,180L1440,0L0,0Z">
+            </path>
+        </svg>
+    </div>
+
+    <!-- Contenido del Section -->
+    <section class="text-center flex-grow pt-20 xl:pt-0">
+        <p class="font-script text-3xl">Viví una experiencia inolvidable</p>
+        <hr class="border-t mt-4 w-1/3 mx-auto border-[var(--primary)]">
+        <img src="public/logo.png" alt="Logo E" class="mx-auto mt-6 w-10">
+    </section>
+
+    <!-- Flecha -->
+    <div id="scroll-arrow"
+        class="cursor-pointer fixed bottom-10 left-1/2 transform -translate-x-1/2 opacity-100 transition-opacity duration-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 animate-bounce text-black" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </div>
+
+
+    <section class="container mx-auto px-6 mt-60 space-y-20">
+        <div class="font-title text-center text-4xl">
+            <p>NUESTROS SERVICIOS</p>
+        </div>
+    
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- SPA COMPARTIDO -->
+            <div class="text-center">
+                <a href="spa.html">
+                    <img src="public/spa.jpeg" alt="SPA" class="w-full h-48 object-cover rounded-lg mb-4 hover:brightness-90 cursor-pointer transition-opacity duration-300">
+                    <h3 class="font-title text-xl uppercase text-[#a48f89]">SPA</h3>
+                </a>
+            </div>
+            <!-- NUTRICIÓN -->
+            <div class="text-center">
+                <a href="nutricion.html">
+                    <img src="public/nutricion.jpeg" alt="Nutrición" class="w-full h-48 object-cover rounded-lg mb-4 hover:brightness-90 cursor-pointer transition-opacity duration-300">
+                    <h3 class="font-title text-xl uppercase text-[#a48f89]">Nutrición</h3>
+                </a>
+            </div>
+            <!-- GYM CLASS -->
+            <div class="text-center">
+                <a href="gym-class.html">
+                    <img src="public/gym-class.jpeg" alt="Gym Class" class="w-full h-48 object-cover rounded-lg mb-4 hover:brightness-90 cursor-pointer transition-opacity duration-300">
+                    <h3 class="font-title text-xl uppercase text-[#a48f89]">Gym Class</h3>
+                </a>
+            </div>
+            <!-- DEPILACIÓN LASER -->
+            <div class="text-center">
+                <a href="depilacion-laser.html">
+                    <img src="public/depilacion-laser.jpeg" alt="Depilación Láser" class="w-full h-48 object-cover rounded-lg mb-4 hover:brightness-90 cursor-pointer transition-opacity duration-300">
+                    <h3 class="font-title text-xl uppercase text-[#a48f89]">Depilación Láser</h3>
+                </a>
+            </div>
+            <!-- BELLEZA DE MANOS Y PIES -->
+            <div class="text-center">
+                <a href="belleza-manos-pies.html">
+                    <img src="public/belleza-manos-pies.jpeg" alt="Belleza de Manos y Pies" class="w-full h-48 object-cover rounded-lg mb-4 hover:brightness-90 cursor-pointer transition-opacity duration-300">
+                    <h3 class="font-title text-xl uppercase text-[#a48f89]">Belleza de Manos y Pies</h3>
+                </a>
+            </div>
+            <!-- MASAJES -->
+            <div class="text-center">
+                <a href="masajes.html">
+                    <img src="public/masajes.jpeg" alt="Masajes" class="w-full h-48 object-cover rounded-lg mb-4 hover:brightness-90 cursor-pointer transition-opacity duration-300">
+                    <h3 class="font-title text-xl uppercase text-[#a48f89]">Masajes</h3>
+                </a>
+            </div>
+            <!-- TRATAMIENTOS FACIALES -->
+            <div class="text-center">
+                <a href="tratamientos-faciales.html">
+                    <img src="public/tratamientos-faciales.jpeg" alt="Tratamientos Faciales" class="w-full h-48 object-cover rounded-lg mb-4 hover:brightness-90 cursor-pointer transition-opacity duration-300">
+                    <h3 class="font-title text-xl uppercase text-[#a48f89]">Tratamientos Faciales</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-[var(--primary)] text-white mt-60 py-10 md:py-20">
+        <div class="container mx-auto px-6 md:px-40 flex flex-col-reverse justify-between md:flex-row md:items-center">
+            <!-- Left Section: Map -->
+            <div class="mb-6 md:mb-0">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.4145379809962!2d-58.45740979723219!3d-34.56220978599859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5d3849d6dbb%3A0x34a17e7f13a06d16!2sAv.%20Cabildo%20%26%20Av.%20Juramento%2C%20C1428%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1745548418247!5m2!1ses!2sar"
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    class="w-[100%] h-[200px] md:w-[500px] md:h-[200px]">
+                </iframe>
+            </div>
+
+            <!-- Right Section: Contact Info -->
+            <div class="text-left flex justify-start flex-col mb-4">
+                <h3 class="font-family: 'Playfair Display', serif; text-2xl mb-4">Contáctanos</h3>
+                <a href="https://www.google.com/maps?ll=-34.562055,-58.456693&z=18&t=m&hl=es&gl=AR&mapclient=embed&q=Av.+Cabildo+%26+Av.+Juramento+C1428+Cdad.+Aut%C3%B3noma+de+Buenos+Aires"
+                    class="font-family: 'Playfair Display', serif; mb-2 md:flex md:items-center md:justify-center justify-start">
+                    <i class="fa-solid fa-location-dot text-[24px] mr-4"></i>
+                    Juramento 1111, Belgrano
+                </a>
+                <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F5491162782070%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAafjSDjxK1sHGApvUJ23-_bRhSIYX8JUV2ONdBCrLqodqhIANSbuB2VA4w3Y0Q_aem_MkLBgWsDEUJYCGvmAnmbxQ&e=AT1-pbPrPvX6Wt7YTw2VrRdh6iOpVXR1OGMCWj41PhWZS1U6-vRqwhaHW1XthGOcxC1Sj7oLUNYzg8aFsmMoJnkmRW3rjL6xRyI5jA"
+                    class="font-family: 'Playfair Display', serif; mb-2 md:flex md:items-center md:justify-center justify-start">
+                    <i class="fab fa-whatsapp text-[24px] mr-4"></i>
+                    Consultas: +54 9 11 6278-2070
+                </a>
+                <!-- Social Icons -->
+                <a href="https://www.instagram.com/emilia.bienestarnatural/" target="_blank"
+                    class="font-family: 'Playfair Display', serif; mb-2 md:flex md:items-center md:justify-center justify-start">
+                    <i class="fab fa-instagram fill-white text-[24px] mr-4"></i>
+                    @emilia.bienestarnatural
+                </a>
+            </div>
+
+        </div>
+        </div>
+
+
+    </footer>
+
+
+    <script src="js/menu.js"></script>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+
+        const arrow = document.getElementById('scroll-arrow');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                arrow.classList.add('opacity-0');
+            } else {
+                arrow.classList.remove('opacity-0');
+            }
+        });
+
+        arrow.addEventListener('click', () => {
+            window.scrollBy({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
+
+    </script>
+</body>
+
+
+
+
+
+</html>

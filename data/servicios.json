@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Masajes Descontracturantes",
+        "precio": 35000
+    },
+    {
+        "nombre": "Masajes Relajantes",
+        "precio": 35000
+    },
+    {
+        "nombre": "Masajes Reductores",
+        "precio": 40000
+    },
+    {
+        "nombre": "Masaje Deportivo",
+        "precio": 35000
+    },
+    {
+        "nombre": "Drenaje Linfático",
+        "precio": 35000
+    },
+    {
+        "nombre": "Exfoliaciones Corporales",
+        "precio": 20000
+    }
+]
